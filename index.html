@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Lengua Castellana</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: linear-gradient(to right, #ffe6f0, #ffeafc);
+      color: #444;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 95%;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff0f5;
+      border-radius: 20px;
+      box-shadow: 0 0 20px pink;
+      margin-top: 40px;
+    }
+
+    .titulo {
+      text-align: center;
+      color: #ff69b4;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .grid-cols {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .columna {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .columna h2 {
+      color: #d63384;
+    }
+
+    .columna ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .columna li {
+      background: #ffccf9;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.3s ease;
+      width: 200px;
+    }
+
+    .columna li:hover {
+      background-color: #ffe6f7;
+    }
+
+    .columna li.tachado {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .columna li.bloqueado {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1 class="titulo">📚 Malla Lengua Castellana y Comunicación 🩷 - UCM</h1>
+  <div class="grid-cols">
+
+    <!-- Columna I -->
+    <div class="columna">
+      <h2>Semestre I</h2>
+      <ul>
+        <li onclick="desbloquear('r1', this)">Lingüística General</li>
+        <li onclick="desbloquear('r2', this)">Introducción a la Literatura</li>
+        <li onclick="desbloquear('r3', this)">Literatura Universal: Letras Clásicas y Medievales</li>
+        <li onclick="desbloquear('r4', this)">Taller de Competencias Comunicativas I</li>
+        <li onclick="desbloquear('r5', this)">Construcción del Ser Docente y Rol Pedagógico</li>
+        <li onclick="desbloquear('r6', this)">Historia de la Educación en Chile y Políticas Públicas</li>
+        <li onclick="desbloquear('r7', this)">Inglés I</li>
+      </ul>
+    </div>
+
+    <!-- Columna II -->
+    <div class="columna">
+      <h2>Semestre II</h2>
+      <ul>
+        <li id="r1" class="bloqueado" onclick="desbloquear('r8', this)">Fonología y Morfología del Español</li>
+        <li id="r2" class="bloqueado" onclick="desbloquear('r9', this)">Literatura Española: Medioevo y Siglo de Oro</li>
+        <li id="r3" class="bloqueado" onclick="desbloquear('r10', this)">Literatura Universal Moderna y Contemporánea</li>
+        <li id="r4" class="bloqueado" onclick="desbloquear('r11', this)">Taller de Competencias Comunicativas II</li>
+        <li id="r5" class="bloqueado" onclick="desbloquear('r12', this)">Diversidad y Convivencia Escolar</li>
+        <li id="r6" class="bloqueado" onclick="desbloquear('r13', this)">Psicología del Desarrollo Humano</li>
+        <li id="r7" class="bloqueado" onclick="desbloquear('r14', this)">Inglés II</li>
+      </ul>
+    </div>
+
+    <!-- Columna III -->
+    <div class="columna">
+      <h2>Semestre III</h2>
+      <ul>
+        <li id="r8" class="bloqueado" onclick="desbloquear('r15', this)">Gramática Española II</li>
+        <li id="r9" class="bloqueado" onclick="desbloquear('r16', this)">Literatura Infantil y Juvenil</li>
+        <li id="r10" class="bloqueado" onclick="desbloquear('r17', this)">Taller Pedagógico I</li>
+        <li id="r11" class="bloqueado" onclick="desbloquear('r18', this)">Literatura Latinoamericana I</li>
+        <li id="r12" class="bloqueado" onclick="desbloquear('r19', this)">---</li>
+        <li id="r13" class="bloqueado" onclick="desbloquear('r20', this)">---</li>
+        <li id="r14" class="bloqueado" onclick="desbloquear('r21', this)">---</li>
+      </ul>
+    </div>
+
+    <!-- Columna IV -->
+    <div class="columna">
+      <h2>Semestre IV</h2>
+      <ul>
+        <li id="r15" class="bloqueado" onclick="desbloquear('r22', this)">Literatura Española: Moderna y Contemporánea</li>
+        <li id="r16" class="bloqueado" onclick="desbloquear('r23', this)">Literatura Latinoamericana II</li>
+        <li id="r17" class="bloqueado" onclick="desbloquear('r24', this)">Semántica y Pragmática</li>
+        <li id="r18" class="bloqueado" onclick="desbloquear('r25', this)">Didáctica de la Literatura</li>
+        <li id="r19" class="bloqueado" onclick="desbloquear('r26', this)">Taller Pedagógico II (Hito I)</li>
+        <li id="r20" class="bloqueado" onclick="desbloquear('r27', this)">Historia de la Lengua Española</li>
+        <li id="r21" class="bloqueado" onclick="desbloquear('r28', this)">---</li>
+      </ul>
+    </div>
+
+    <!-- Columna V -->
+    <div class="columna">
+      <h2>Semestre V</h2>
+      <ul>
+        <li id="r22" class="bloqueado">Lingüística del Texto</li>
+        <li id="r23" class="bloqueado">Teorías del Aprendizaje</li>
+        <li id="r24" class="bloqueado">Certificación I</li>
+        <li id="r25" class="bloqueado">Diseño Curricular</li>
+        <li id="r26" class="bloqueado">Gestión Escolar</li>
+        <li id="r27" class="bloqueado">Taller Pedagógico III</li>
+        <li id="r28" class="bloqueado">---</li>
+      </ul>
+    </div>
+
+    <!-- Columna VI -->
+    <div class="columna">
+      <h2>Semestre VI</h2>
+      <ul>
+        <li class="bloqueado">Dialectología y Sociolingüística</li>
+        <li class="bloqueado">Orientación Educacional</li>
+        <li class="bloqueado">Didáctica del Discurso Escrito</li>
+        <li class="bloqueado">Evaluación de los Aprendizajes</li>
+        <li class="bloqueado">Literatura Chilena I</li>
+        <li class="bloqueado">Certificación II</li>
+      </ul>
+    </div>
+
+    <!-- Columna VII -->
+    <div class="columna">
+      <h2>Semestre VII</h2>
+      <ul>
+        <li class="bloqueado">Certificación III</li>
+        <li class="bloqueado">Introducción a la Fe</li>
+        <li class="bloqueado">Taller Pedagógico IV</li>
+        <li class="bloqueado">Taller de Investigación I</li>
+        <li class="bloqueado">Didáctica de la Comprensión</li>
+        <li class="bloqueado">Expresión Teatral</li>
+      </ul>
+    </div>
+
+    <!-- Columna VIII -->
+    <div class="columna">
+      <h2>Semestre VIII</h2>
+      <ul>
+        <li class="bloqueado">Literatura Chilena II</li>
+        <li class="bloqueado">Literatura Chilena III</li>
+        <li class="bloqueado">Debates Literarios</li>
+        <li class="bloqueado">Didáctica Multicultural</li>
+        <li class="bloqueado">Metodologías de Investigación</li>
+        <li class="bloqueado">Optativo I</li>
+      </ul>
+    </div>
+
+    <!-- Columna IX -->
+    <div class="columna">
+      <h2>Semestre IX</h2>
+      <ul>
+        <li class="bloqueado">Optativo II</li>
+        <li class="bloqueado">Análisis del Discurso</li>
+        <li class="bloqueado">Optativo III</li>
+        <li class="bloqueado">Ética Cristiana</li>
+        <li class="bloqueado">Síntesis de Grado</li>
+        <li class="bloqueado">Investigación II (Hito II)</li>
+      </ul>
+    </div>
+
+    <!-- Columna X -->
+    <div class="columna">
+      <h2>Semestre X</h2>
+      <ul>
+        <li class="bloqueado">Didáctica del Discurso Oral</li>
+        <li class="bloqueado">Investigación Acción</li>
+        <li class="bloqueado">Práctica Profesional</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function desbloquear(id, elem) {
+    elem.classList.toggle("tachado");
+    const siguiente = document.getElementById(id);
+    if (siguiente) {
+      siguiente.classList.remove("bloqueado");
+      siguiente.setAttribute("onclick", `desbloquear('${id}-next', this)`);
+    }
+  }
+</script>
+</body>
+</html>
